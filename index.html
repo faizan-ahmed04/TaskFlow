@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <span>✓</span> TaskFlow
+            </div>
+
+            <p>Organize your work. Achieve your goals.</p>
+        </header>
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </div>
+
+        </section>
+
+        <!-- Add Task Form -->
+        <section class="task-form">
+
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter your task..."
+                    required
+                >
+
+                <div class="form-options">
+
+                    <select id="priority">
+                        <option value="Low">Low Priority</option>
+                        <option value="Medium" selected>Medium Priority</option>
+                        <option value="High">High Priority</option>
+                    </select>
+
+                    <input type="date" id="dueDate">
+
+                    <button type="submit" id="submitButton">
+                        Add Task
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <!-- Task List -->
+        <section class="task-section">
+
+            <div class="task-header">
+                <h2>My Tasks</h2>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search tasks..."
+                >
+            </div>
+
+            <!-- Filters -->
+            <div class="filters">
+
+                <button class="filter-btn active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter-btn" data-filter="pending">
+                    Pending
+                </button>
+
+                <button class="filter-btn" data-filter="completed">
+                    Completed
+                </button>
+
+            </div>
+
+            <!-- Tasks will appear here -->
+            <div id="taskList"></div>
+
+        </section>
+
+        <footer>
+            <p>TaskFlow © 2026 | Built with HTML, CSS & JavaScript</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
